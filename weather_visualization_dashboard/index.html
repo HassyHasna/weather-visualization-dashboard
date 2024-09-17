@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Data Visualization Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Weather Data Visualization Dashboard</h1>
+        
+        <section id="controls">
+            <div class="filter-group">
+                <label for="dataType">Select Weather Data Type:</label>
+                <select id="dataType">
+                    <option value="temperature">Temperature (°C)</option>
+                    <option value="humidity">Humidity (%)</option>
+                    <option value="precipitation">Precipitation (mm)</option>
+                    <option value="wind-speed">Wind Speed (km/h)</option>
+                </select>
+            </div>
+            
+            <div class="filter-group">
+                <label for="dateRange">Date Range:</label>
+                <input type="date" id="startDate">
+                <input type="date" id="endDate">
+                <button id="applyFilters">Apply Filters</button>
+            </div>
+        </section>
+
+        <section id="charts">
+            <div class="chart-container">
+                <canvas id="chart1"></canvas> 
+            </div>
+            <div class="chart-container">
+                <canvas id="chart2"></canvas> 
+            </div>
+        </section>
+    </div>
+    
+    <script src="scripts.js"></script>
+</body>
+</html>
